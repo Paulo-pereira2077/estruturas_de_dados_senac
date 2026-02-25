@@ -1,6 +1,6 @@
 // Elabore um algortimo que armazene números inteiros e aleatórios em um array
 
-package ListaNumeros;
+package aula01.ListaNumeros;
 import java.util.Random;
 
 public class principalListaNumeros {
