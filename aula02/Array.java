@@ -1,8 +1,5 @@
 package aula02;
 
-/*
- *  Professor Gerson Risso
- */
 public class Array {
 
     private Pet[] lista = new Pet[3];

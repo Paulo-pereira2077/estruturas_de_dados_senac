@@ -20,13 +20,14 @@ public class Principal {
 
         array.exibir();
 
+        // questão 3
         int indice = array.pesquisar(2);
 
         if (indice >= 0){
-            System.out.println("Foi encontrado");
+            System.out.println("Foi encontrado o " + indice);
         }
         else{
-            System.out.println("Não foi encontrado");
+            System.out.println("Não foi encontrado " + indice);
         }
     }
 }

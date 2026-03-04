@@ -45,7 +45,7 @@ public class Pet {
     }
 
     public int getId() {
-        return cont;
+        return id;
     }
 
     @Override
