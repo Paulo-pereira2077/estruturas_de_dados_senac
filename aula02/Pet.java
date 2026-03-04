@@ -6,15 +6,19 @@ public class Pet {
     private float peso;
     private int id;
 
+    // questão 2 -
+    private static int cont = 1;
+
     public Pet() {
     }
 
-    public Pet(String nome, String raca, float peso, int id) {
+    public Pet(String nome, String raca, float peso) {
         this.nome = nome;
         this.raca = raca;
         this.peso = peso;
-        this.id = id;
+        id = cont++;
     }
+
 
     public String getNome() {
         return nome;
@@ -41,16 +45,12 @@ public class Pet {
     }
 
     public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
+        return cont;
     }
 
     @Override
     public String toString(){
-        return "Nome: " + nome + "Raça: " + raca + "Peso: " + peso + "KG Id" + id;
+        return "Nome: " + nome + " Raça: " + raca + " Peso: " + peso + "KG Id: " + id;
     }
 
 }
