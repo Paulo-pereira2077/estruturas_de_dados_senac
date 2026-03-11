@@ -30,7 +30,7 @@ public class Principal {
         }
 
 
-        if (array.atualizar(1,12)){
+        if (array.atualizar(0,3)){
             System.out.println("Idade atualizada com sucesso!");
         }
         else {

@@ -64,15 +64,13 @@ public class Array {
         return false;
     }
 
+    // exercicio 2
     public boolean atualizar(int id, int idade) {
         int indice = pesquisar(id);
-
-        for (int i = indice; i < contador; i++) {
-            if (lista[i].getId() == id) {
-                lista[i].setIdade(idade);
+            if (indice >= 0) {
+                lista[indice].setIdade(idade);
                 return true;
             }
-        }
         return false;
     }
 
