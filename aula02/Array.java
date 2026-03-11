@@ -26,19 +26,52 @@ public class Array {
         return novo;
     }
 
-    //questão 3 -
-    public int pesquisar(int id){
 
-        for (int i = 0; i < lista.length; i++) {
+    /**
+     * Pesquisa no array lista um id.
+     * @param id int
+     * @return int
+     */
 
-            if(lista[i] != null){
-                if (lista[i].getId() == id) {
-                    return i;
-                }
+    private int pesquisar(int id) {
+
+        for (int i = 0; i < contador; i++) {
+            if (id == lista[i].getId()){
+                return i;
             }
         }
         return -1;
+    }
 
+    /**
+     * Remove um elemento Pet do array pelo id.
+     *
+     * @return boolean
+     */
+    public boolean remover(int id){
+        int indice = pesquisar(id);
+
+        if (indice >= 0){
+            //remover
+            for (int i = indice; i < contador - 1; i++){
+                lista[i] = lista[i + 1];
+            }
+            contador--;
+
+            return true;
+        }
+        return false;
+    }
+
+    public boolean atualizar(int id, int idade){
+        int indice = pesquisar(id);
+
+        if (indice >= 0){
+            lista[indice].setIdade(idade);
+            return true;
+        }
+
+        return false;
     }
 
 }

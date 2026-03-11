@@ -5,6 +5,7 @@ public class Pet {
     private String nome, raca;
     private float peso;
     private int id;
+    private int idade;
 
     // questão 2 -
     private static int cont = 1;
@@ -12,11 +13,12 @@ public class Pet {
     public Pet() {
     }
 
-    public Pet(String nome, String raca, float peso) {
+    public Pet(String nome, String raca, float peso, int idade) {
         this.nome = nome;
         this.raca = raca;
         this.peso = peso;
-        id = cont++;
+        this.idade = idade;
+        id = cont++; // é um incremento pós fixado
     }
 
 
@@ -48,11 +50,19 @@ public class Pet {
         return id;
     }
 
-    @Override
-    public String toString(){
-        return "Nome: " + nome + " Raça: " + raca + " Peso: " + peso + "KG Id: " + id;
+    public int getIdade() {
+        return idade;
     }
 
+    @Override
+    public String toString(){
+        return "Nome: " + nome + " Raça: " + raca + " Peso: " + peso + "KG, " + "Id: " + id + "e Idade: " + idade;
+    }
+
+    public void setIdade(int idade) {
+
+        this.idade = idade;
+    }
 }
 
 

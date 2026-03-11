@@ -5,10 +5,10 @@ public class Principal {
     public static void main(String[] args) {
         Array array = new Array();
 
-        Pet pet1 = new Pet("Mel", "SRD", 13.1F);
-        Pet pet2 = new Pet("Gaia", "SRD", 15.2F);
-        Pet pet3=new Pet("SRD","Julie",15);
-        Pet pet4 = new Pet("Mel", "SRD", 13.1F);
+        Pet pet1 = new Pet("Mel", "SRD", 13.1F, 2);
+        Pet pet2 = new Pet("Gaia", "SRD", 15.2F, 3);
+        Pet pet3=new Pet("SRD","Julie",15, 4);
+        Pet pet4 = new Pet("Mel", "SRD", 13.1F, 10);
 
 
         //Chamadas dos métodos
@@ -20,14 +20,22 @@ public class Principal {
 
         array.exibir();
 
-        // questão 3
-        int indice = array.pesquisar(2);
+        System.out.println("========== Remover ==========");
 
-        if (indice >= 0){
-            System.out.println("Foi encontrado o " + indice);
+        if (array.remover(1)){
+            System.out.println("Removido com sucesso!");
         }
-        else{
-            System.out.println("Não foi encontrado " + indice);
+        else {
+            System.out.println("Não foi Removido!");
         }
+
+
+        if (array.atualizar(1,12)){
+            System.out.println("Idade atualizada com sucesso!");
+        }
+        else {
+            System.out.println("Não foi atualizado!");
+        }
+
     }
 }
