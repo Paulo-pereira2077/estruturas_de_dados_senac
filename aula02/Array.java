@@ -8,7 +8,7 @@ public class Array {
     // questão 1 -
     public void inserir(Pet pet) {
         if (contador == lista.length) {
-            lista=alocarNovoArray();
+            lista = alocarNovoArray();
         }
 
         lista[contador++] = pet;
@@ -29,6 +29,7 @@ public class Array {
 
     /**
      * Pesquisa no array lista um id.
+     *
      * @param id int
      * @return int
      */
@@ -36,7 +37,7 @@ public class Array {
     private int pesquisar(int id) {
 
         for (int i = 0; i < contador; i++) {
-            if (id == lista[i].getId()){
+            if (id == lista[i].getId()) {
                 return i;
             }
         }
@@ -48,12 +49,12 @@ public class Array {
      *
      * @return boolean
      */
-    public boolean remover(int id){
+    public boolean remover(int id) {
         int indice = pesquisar(id);
 
-        if (indice >= 0){
+        if (indice >= 0) {
             //remover
-            for (int i = indice; i < contador - 1; i++){
+            for (int i = indice; i < contador - 1; i++) {
                 lista[i] = lista[i + 1];
             }
             contador--;
@@ -63,16 +64,16 @@ public class Array {
         return false;
     }
 
-    public boolean atualizar(int id, int idade){
+    public boolean atualizar(int id, int idade) {
         int indice = pesquisar(id);
 
-        if (indice >= 0){
-            lista[indice].setIdade(idade);
-            return true;
+        for (int i = indice; i < contador; i++) {
+            if (lista[i].getId() == id) {
+                lista[i].setIdade(idade);
+                return true;
+            }
         }
-
         return false;
     }
 
 }
-
