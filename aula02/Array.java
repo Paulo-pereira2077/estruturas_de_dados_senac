@@ -65,6 +65,14 @@ public class Array {
     }
 
     // exercicio 2
+
+    /**
+     * Atualiza a idade conforme o id
+     *
+     * @param id
+     * @param idade
+     * @return int
+     */
     public boolean atualizar(int id, int idade) {
         int indice = pesquisar(id);
             if (indice >= 0) {
