@@ -7,7 +7,7 @@ public class Principal {
 
         Pet pet1 = new Pet("Mel", "SRD", 13.1F, 2);
         Pet pet2 = new Pet("Gaia", "SRD", 15.2F, 3);
-        Pet pet3=new Pet("SRD","Julie",15, 4);
+        Pet pet3=new Pet("Julie", "SRD",15, 4);
         Pet pet4 = new Pet("Mel", "SRD", 13.1F, 10);
 
 
@@ -19,23 +19,41 @@ public class Principal {
 
 
         array.exibir();
+//
+//        System.out.println("========== Remover ==========");
+//
+//        if (array.remover(1)){
+//            System.out.println("Removido com sucesso!");
+//        }
+//        else {
+//            System.out.println("Não foi Removido!");
+//        }
 
-        System.out.println("========== Remover ==========");
+//        if (array.atualizar(0,3)){
+//            System.out.println("Idade atualizada com sucesso!");
+//            array.exibir();
+//        }
+//        else {
+//            System.out.println("Não foi atualizado!");
+//        }
 
-        if (array.remover(1)){
-            System.out.println("Removido com sucesso!");
+
+        // Testando a busca Exercício 1 b)
+        int idBuscado = 3;
+        Pet encontrado = array.buscaBinaria(idBuscado, 0, array.getContador() - 1);
+
+        if (encontrado != null) {
+            System.out.println("\nPet encontrado: " + encontrado.getNome());
+        } else {
+            System.out.println("\nPet não encontrado.");
         }
-        else {
-            System.out.println("Não foi Removido!");
-        }
 
-
-        if (array.atualizar(0,3)){
-            System.out.println("Idade atualizada com sucesso!");
-        }
-        else {
-            System.out.println("Não foi atualizado!");
-        }
-
+        // Ordenar por nome e exibir Exercício 1 c)
+        System.out.println("\nOrdenando por nome...");
+        array.ordenarPorNome();
+        array.exibir();
     }
+
+
+
 }
