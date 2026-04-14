@@ -1,4 +1,4 @@
-package aula02;
+package listaSimplesmenteLigada;
 
 //Classe Pet
 public class Pet {

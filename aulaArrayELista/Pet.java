@@ -1,4 +1,4 @@
-package aula03;
+package aulaArrayELista;
 
 //Classe Pet
 public class Pet {

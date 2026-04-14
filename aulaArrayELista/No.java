@@ -1,4 +1,4 @@
-package aula03;
+package aulaArrayELista;
 
 public class No {
     private Pet pet;

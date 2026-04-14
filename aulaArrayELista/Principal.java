@@ -1,4 +1,4 @@
-package aula03;
+package aulaArrayELista;
 
 // Importe as classes do outro pacote se necessário
 

@@ -1,4 +1,4 @@
-package aula03;
+package aulaArrayELista;
 
 public class Lista {
     private No inicio; // ESSENCIAL: A lista precisa saber onde começa

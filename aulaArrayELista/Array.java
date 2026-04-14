@@ -1,4 +1,4 @@
-package aula02;
+package aulaArrayELista;
 
 public class Array {
 

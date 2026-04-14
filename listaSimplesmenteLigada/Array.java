@@ -1,4 +1,4 @@
-package aula03;
+package listaSimplesmenteLigada;
 
 public class Array {
 
